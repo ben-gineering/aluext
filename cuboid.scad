@@ -10,14 +10,14 @@ cube_ch = 2;    // Chamfer
 m4_diameter = 4.5;  // M4 hole diameter (slightly larger for clearance)
 
 hole1_pos_x = 0;   // X position of first hole
-hole1_pos_y = -7;   // Y position of first hole
+hole1_pos_y = 5;   // Y position of first hole
 hole1_pos_z = -2;   // Z position of first hole
 
 hole2_pos_x = -2;   // X position of second hole
 hole2_pos_y = 0;   // Y position of second hole
-hole2_pos_z = -7;   // Z position of second hole
+hole2_pos_z = 5;   // Z position of second hole
 
-hole3_pos_x = -7;   // X position of second hole
+hole3_pos_x = 5;   // X position of second hole
 hole3_pos_y = -2;   // Y position of second hole
 hole3_pos_z = 0;   // Z position of second hole
 
