@@ -22,7 +22,7 @@ hole2_pos_z = -10;   // Z position of second hole
 
 bearing_dia = 22;
 bearing_depth = 7;
-bearing_shoulder = 1;
+bearing_shoulder = 2;
 
 
 // Function to create the model
@@ -48,7 +48,7 @@ module bearing_housing() {
       ycyl(l = m4_counterbore_depth+1, r = m4_counterbore_dia/2, $fn = 32);
 
     // bearing
-    translate([0 + bearing_depth,10,20]) xcyl(l = cube_x - bearing_depth, r = bearing_dia/2, $fn = 32);
+    translate([cube_x/2 - bearing_depth/2,10,20]) xcyl(l = bearing_depth, r = bearing_dia/2, $fn = 32);
     translate([0,10,20]) xcyl(l = cube_x+1, r = bearing_dia/2 - bearing_shoulder, $fn = 32);
   }
 }
