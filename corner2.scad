@@ -4,8 +4,8 @@ include <BOSL2/std.scad>
 // Cube dimensions
 cube_x= 20;   // Length in X direction
 cube_y= 20;    // Width in Y direction
-cube_z = 30;   // Height in Z direction
-cube_ch = 2;    // Chamfer
+cube_z = 33;   // Height in Z direction
+cube_ch = 3;    // Chamfer
 
 m4_diameter = 4.5;  // M4 hole diameter (slightly larger for clearance)
 m4_length = 14;
