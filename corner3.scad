@@ -8,6 +8,9 @@ cube_z = 20;   // Height in Z direction
 cube_ch = 1;    // Chamfer
 
 m4_diameter = 4.5;  // M4 hole diameter (slightly larger for clearance)
+m4_length = 14;
+m4_counterbore_dia = 12.5;
+m4_counterbore_depth = 12;
 
 hole1_pos_x = 0;   // X position of first hole
 hole1_pos_y = 5;   // Y position of first hole
@@ -29,10 +32,18 @@ module coboid_with_holes() {
     cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch);
       translate([hole1_pos_x, hole1_pos_y, hole1_pos_z])
         xcyl(l = cube_x+1, r = m4_diameter/2, $fn = 32);
+      translate([hole1_pos_x + cube_x/2 - m4_counterbore_depth/2, hole1_pos_y, hole1_pos_z])
+        xcyl(l = m4_counterbore_depth+1, r = m4_counterbore_dia/2, $fn = 32);
+      
       translate([hole2_pos_x, hole2_pos_y, hole2_pos_z])
         ycyl(l = cube_y+1, r = m4_diameter/2, $fn = 32);
+      translate([hole2_pos_x, hole2_pos_y + cube_y/2 - m4_counterbore_depth/2, hole2_pos_z])
+        ycyl(l = m4_counterbore_depth+1, r = m4_counterbore_dia/2, $fn = 32);
+      
       translate([hole3_pos_x, hole3_pos_y, hole3_pos_z])
         zcyl(l = cube_z+1, r = m4_diameter/2, $fn = 32);
+      translate([hole3_pos_x, hole3_pos_y, hole3_pos_z  + cube_y/2 - m4_counterbore_depth/2])
+        zcyl(l = m4_counterbore_depth+1, r = m4_counterbore_dia/2, $fn = 32);
   }
 }
 
