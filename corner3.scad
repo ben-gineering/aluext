@@ -9,8 +9,8 @@ cube_ch = 1;    // Chamfer
 
 m4_diameter = 4.5;  // M4 hole diameter (slightly larger for clearance)
 m4_length = 20;
-m4_counterbore_dia = 12.5;
-m4_counterbore_depth = 6;
+m4_counterbore_dia = 7.5;
+m4_counterbore_depth = 5;
 
 hole1_pos_x = 0;   // X position of first hole
 hole1_pos_y = 0;   // Y position of first hole

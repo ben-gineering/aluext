@@ -37,8 +37,8 @@ module corner2() {
       translate([hole2_pos_x, hole2_pos_y + cube_y/2 - m4_counterbore_depth/2, hole2_pos_z])
         ycyl(l = m4_counterbore_depth+1, r = m4_counterbore_dia/2, $fn = 32);
 
-      zrot(45) xmove(15)
-        cuboid([cube_x,cube_y,cube_z+1]);
+      //zrot(45) xmove(20)
+        //cuboid([cube_x,cube_y,cube_z+1]);
   }
 }
 
