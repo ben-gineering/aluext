@@ -9,22 +9,17 @@ cube_z = 40;   // Height in Z direction
 cube_ch = 1;    // Chamfer
 
 // Function to create the model
-module corner2() {
-  diff() {
-    // Main rectangular cube
-    cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch) {
-      // First hole in X direction (FRONT face)
+module corner2(){
+diff()
+  cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch) {
+    down(10) 
       attach(FRONT) 
-        move(DOWN(10))
-        screw_hole("M4,20", head="socket", counterbore=true, $fn=32);
-      
-      // Second hole in Y direction (RIGHT face)
-      attach(RIGHT)
-        move(UP(10))
-        screw_hole("M4,20", head="socket", counterbore=true, $fn=32);
-    }
+        screw_hole("M4,20", head="socket", counterbore=true, $fn=32, anchor=TOP);
+    up(10)
+      attach(RIGHT) 
+        screw_hole("M4,20", head="socket", counterbore=true, $fn=32, anchor=TOP);
   }
 }
 
-// Create the model
+
 corner2();
