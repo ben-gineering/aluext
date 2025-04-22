@@ -21,12 +21,19 @@ The components are designed to be parametric to accommodate different hardware c
 
 ## Components
 
-### Corners and Connectors
-- **corner2.scad**: A 2-way corner connector with M4 screw holes for mounting to aluminum extrusion
-- **corner2.clip.scad**: A clip-on version of the 2-way corner connector that doesn't require screws
-- **corner3.scad**: A 3-way corner connector with M4 screw holes and counterbores
+Components are organized into tiers based on their usage frequency and importance:
 
-### Mounting Solutions
+### Tier 0 - Essential Components
+Components needed for virtually every project:
+- **corner2.scad**: A 2-way corner connector with M4 screw holes for mounting to aluminum extrusion
+
+### Tier 1 - Extended Functionality
+Components that extend basic functionality for many projects:
+- **corner3.scad**: A 3-way corner connector with M4 screw holes and counterbores
+- **corner2.clip.scad**: A clip-on version of the 2-way corner connector that doesn't require screws
+
+### Tier 2 - Project-Specific Components
+Specialized components likely needed by only a few projects:
 - **bearing_housing.scad**: Housing for 22mm bearings with mounting holes
 - **rod_mount.scad**: Mount for 8mm rods with M4 mounting holes
 
