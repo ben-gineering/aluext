@@ -6,6 +6,19 @@ A collection of OpenSCAD models for aluminum extrusion-based projects and compon
 
 This repository contains parametric 3D models for various components that can be used with aluminum extrusion profiles. These models can be customized and 3D printed to create mounts, connectors, and other accessories for your DIY projects.
 
+## Motivation
+
+The main motivation behind the AluExt framework is that by adhering to a few set defaults, nothing else needs to be exact, and therefore iteration and adjustments can happen much faster. Following the principle: "If you can't make it perfect, make it adjustable."
+
+The components are designed to be parametric to accommodate different hardware combinations, while providing sensible defaults for quick prototyping.
+
+## Default Parameters
+
+- **Extrusion Profile**: 20x20mm
+- **T-Slot Width**: 6mm
+- **Screws**: M4 x 20mm
+- **Standard Extrusion Lengths**: 200mm, 300mm, 0.5m, 1m
+
 ## Components
 
 ### Corners and Connectors
