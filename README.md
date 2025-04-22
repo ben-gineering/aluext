@@ -17,7 +17,7 @@ The components are designed to be parametric to accommodate different hardware c
 - **Extrusion Profile**: 20x20mm
 - **T-Slot Width**: 6mm
 - **Screws**: M4 x 20mm
-- **Standard Extrusion Lengths**: 200mm, 300mm, 0.5m, 1m
+- **Standard Extrusion Lengths**: 0.2m, 0.3m, 0.5m, 1m
 
 ## Components
 
@@ -49,7 +49,3 @@ Most models include customizable parameters:
 2. Open the desired .scad file with OpenSCAD
 3. Adjust parameters as needed for your specific application
 4. Render and export as STL for 3D printing
-
-## Deprecated Components
-
-Some older components have been moved to the deprecated folder.
