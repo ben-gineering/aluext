@@ -9,7 +9,7 @@ cube_z = 40;   // Height in Z direction
 cube_ch = 1;    // Chamfer
 thread_engagement = 5;
 washer_thickness = 1;
-washer_diameter = 10.1;
+washer_diameter = 12.5;
 bore_clearance = max(cube_x, cube_y, cube_z);
 
 
