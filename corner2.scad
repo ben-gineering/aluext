@@ -31,6 +31,12 @@ diff()
     up(10)
       attach(RIGHT) 
         screw_bore();
+    down(10) 
+      attach(BACK) 
+        screw_bore();
+    up(10)
+      attach(LEFT) 
+        screw_bore();
   }
 }
 
