@@ -14,7 +14,7 @@ bore_clearance = max(cube_x, cube_y, cube_z);
 
 
 module screw_bore(){
-down(cube_z+thread_engagement+3) // 3mm panels
+down(cube_z+thread_engagement+4) // 3mm or 4mm panels
   screw_hole("M4,20", head="socket", counterbore=bore_clearance, $fn=32, anchor=BOT);
 }
 
@@ -22,11 +22,8 @@ down(cube_z+thread_engagement+3) // 3mm panels
 module corner2(){
 diff()
   cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch) {
-    //attach(TOP) 
-      //#screw_bore();
-    attach(TOP)
-      down(cube_z+thread_engagement+4) // 3mm or 4mm panels
-        screw("M4,20", head="socket", counterbore=bore_clearance, $fn=32, anchor=BOT);
+    attach(TOP) 
+      screw_bore();
   }
 }
 
