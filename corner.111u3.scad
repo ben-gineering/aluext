@@ -26,7 +26,7 @@ hole3_pos_z = 0;   // Z position of second hole
 
 
 // Function to create the model
-module coboid_with_holes() {
+module corner() {
   difference() {
     // Main rectangular cube
     cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch);
@@ -48,4 +48,4 @@ module coboid_with_holes() {
 }
 
 // Create the model
-coboid_with_holes();
+corner();

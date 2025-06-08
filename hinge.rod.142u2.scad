@@ -26,7 +26,7 @@ bearing_shoulder = 0;
 
 
 // Function to create the model
-module bearing_housing() {
+module hinge() {
   difference() {
     // Main rectangular cube
     union() {
@@ -55,4 +55,4 @@ module bearing_housing() {
 }
 
 // Create the model
-bearing_housing();
+hinge();

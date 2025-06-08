@@ -19,7 +19,7 @@ down(cube_z+thread_engagement+4) // 3mm or 4mm panels
 }
 
 // Function to create the model
-module corner2(){
+module block(){
 diff()
   cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch) {
     attach(TOP) 
@@ -27,4 +27,4 @@ diff()
   }
 }
 
-corner2();
+block();
