@@ -3,10 +3,9 @@ include <BOSL2/screws.scad>
 
 
 // Cube dimensions
-u = 20;
-cube_x= 1*u;   // Length in X direction
-cube_y= 2*u;    // Width in Y direction
-cube_z = 2*u;   // Height in Z direction
+cube_x = 20;   // Length in X direction
+cube_y = 40;    // Width in Y direction
+cube_z = 40;   // Height in Z direction
 cube_ch = 1;    // Chamfer
 thread_engagement = 5;
 washer_thickness = 1;
@@ -25,10 +24,13 @@ screw_hole("M4,20", head="socket", counterbore=bore_clearance, $fn=32, anchor=BO
 module block(){
 diff()
   cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch) {
-    fwd(10)
-      attach(TOP)
-        down(cube_z + thread_engagement) screw_bore();
-    up(10) 
+    up(10) fwd(10)
+      attach(RIGHT)
+        down(cube_x + thread_engagement) screw_bore();
+    up(10) fwd(10)
+      attach(LEFT)
+        down(cube_x + thread_engagement) screw_bore();
+    down(10) 
       attach(FRONT)
         down(cube_y + thread_engagement) screw_bore();
   }
