@@ -21,21 +21,37 @@ The components are designed to be parametric to accommodate different hardware c
 
 ## Components
 
-Components are organized into tiers based on their usage frequency and importance:
+All components are parametric and designed for use with 20x20mm aluminum extrusion (where 1 unit (u) = 20mm). The components in this repository use a naming convention to convey their type, dimensions, and screw count:
 
-### Tier 0 - Essential Components
-Components needed for virtually every project:
-- **corner2.scad**: A 2-way corner connector with M4 screw holes for mounting to aluminum extrusion
+`[type].[dimensions]u[screw_count].scad`
 
-### Tier 1 - Extended Functionality
-Components that extend basic functionality for many projects:
-- **corner3.scad**: A 3-way corner connector with M4 screw holes and counterbores
-- **corner2.clip.scad**: A clip-on version of the 2-way corner connector that doesn't require screws
+Where:
+- `[type]`: The component type (e.g., corner, block, plate, hinge.bearing, hinge.rod)
+- `[dimensions]`: Three numbers representing the dimensions in units (u) in the order: **width (x)**, **height (z)**, **depth (y)**
+- `[screw_count]`: The number of screws used by the component
 
-### Tier 2 - Project-Specific Components
-Specialized components likely needed by only a few projects:
-- **bearing_housing.scad**: Housing for 22mm bearings with mounting holes
-- **rod_mount.scad**: Mount for 8mm rods with M4 mounting holes
+### Current Components
+
+- **Corner Connectors**:
+  - `corner.111u3.scad`: Triple screw corner connector for 1u (20mm) in all dimensions
+  - `corner.112u2.scad`: Corner connector for 1u (x), 1u (z), 2u (y) with two screws
+  - `corner.122u2.scad`: Corner connector for 1u (x), 2u (z), 2u (y) with two screws
+
+- **Blocks**:
+  - `block.111u1.scad`: Block connector for 1u in all dimensions with one screw
+  - `block.122u2.scad`: Block connector for 1u (x), 2u (z), 2u (y) with two screws
+  - `block.121215mm1.scad`: Block connector with dimensions 12mm (x), 12mm (z), 15mm (y) and one screw (exception to unit-based naming)
+
+- **Plates**:
+  - `plate.112u2.scad`: Plate for 1u (x), 1u (z), 2u (y) with two screws
+
+- **Hinges**:
+  - `hinge.bearing.142u2.scad`: Bearing housing for hinge (1u x, 4u z, 2u y) with two screws
+  - `hinge.rod.142u2.scad`: Rod mount for hinge (1u x, 4u z, 2u y) with two screws
+
+### Deprecated Components
+
+The `deprecated/` directory contains older versions of components that are no longer recommended for use.
 
 ## Parameters
 
