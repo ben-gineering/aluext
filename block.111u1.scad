@@ -3,9 +3,10 @@ include <BOSL2/screws.scad>
 
 
 // Cube dimensions
-cube_x= 20;   // Length in X direction
-cube_y= 20;    // Width in Y direction
-cube_z = 20;   // Height in Z direction
+u = 20;
+cube_x= u;   // Length in X direction
+cube_y= u;    // Width in Y direction
+cube_z = u;   // Height in Z direction
 cube_ch = 1;    // Chamfer
 thread_engagement = 5;
 washer_thickness = 1;
