@@ -18,27 +18,43 @@ washer_thickness_3030 = 1;
 washer_diameter_3030 = 12.5;
 bore_clearance_3030 = 3 * u_3030;
 
+// Constants for 4040 profile
+u_4040 = 40;
+cube_ch_4040 = 2.0;
+thread_engagement_4040 = 7;
+screw_type_4040 = "M8,40";
+washer_thickness_4040 = 1;
+washer_diameter_4040 = 17;
+bore_clearance_4040 = 3 * u_4040;
+
 // Set the main variables based on configuration
 u = conf == "2020" ? u_2020 : 
-    conf == "3030" ? u_3030 : u_2020;
+    conf == "3030" ? u_3030 :
+    conf == "4040" ? u_4040 : u_2020;
 
 cube_ch = conf == "2020" ? cube_ch_2020 :
-          conf == "3030" ? cube_ch_3030 : cube_ch_2020;
+          conf == "3030" ? cube_ch_3030 :
+          conf == "4040" ? cube_ch_4040 : cube_ch_2020;
 
 thread_engagement = conf == "2020" ? thread_engagement_2020 :
-                    conf == "3030" ? thread_engagement_3030 : thread_engagement_2020;
+                    conf == "3030" ? thread_engagement_3030 :
+                    conf == "4040" ? thread_engagement_4040 : thread_engagement_2020;
 
 screw_type = conf == "2020" ? screw_type_2020 :
-             conf == "3030" ? screw_type_3030 : screw_type_2020;
+             conf == "3030" ? screw_type_3030 :
+             conf == "4040" ? screw_type_4040 : screw_type_2020;
 
 washer_thickness = conf == "2020" ? washer_thickness_2020 :
-                   conf == "3030" ? washer_thickness_3030 : washer_thickness_2020;
+                   conf == "3030" ? washer_thickness_3030 :
+                   conf == "4040" ? washer_thickness_4040 : washer_thickness_2020;
 
 washer_diameter = conf == "2020" ? washer_diameter_2020 :
-                  conf == "3030" ? washer_diameter_3030 : washer_diameter_2020;
+                  conf == "3030" ? washer_diameter_3030 :
+                  conf == "4040" ? washer_diameter_4040 : washer_diameter_2020;
 
 bore_clearance = conf == "2020" ? bore_clearance_2020 :
-                 conf == "3030" ? bore_clearance_3030 : bore_clearance_2020;
+                 conf == "3030" ? bore_clearance_3030 :
+                 conf == "4040" ? bore_clearance_4040 : bore_clearance_2020;
 
 
 module screw_bore(){

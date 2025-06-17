@@ -14,9 +14,9 @@ The components are designed to be parametric to accommodate different hardware c
 
 ## Default Parameters
 
-- **Extrusion Profile**: 20x20mm
+- **Supported Extrusion Profiles**: 2020 (20x20mm), 3030 (30x30mm), 4040 (40x40mm)
 - **T-Slot Width**: 6mm
-- **Screws**: M4 x 20mm
+- **Screws**: Default M4 (2020), M6 (3030), M8 (4040)
 - **Standard Extrusion Lengths**: 0.2m, 0.3m, 0.5m, 1m
 
 ## Components
