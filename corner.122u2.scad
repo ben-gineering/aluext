@@ -1,37 +1,17 @@
 include <BOSL2/std.scad>
 include <BOSL2/screws.scad>
+include <config.scad>
 
-
-// Cube dimensions
-u = 20;
-cube_x= 1*u;   // Length in X direction
-cube_y= 2*u;    // Width in Y direction
-cube_z = 2*u;   // Height in Z direction
-cube_ch = 1;    // Chamfer
-thread_engagement = 5;
-washer_thickness = 1;
-washer_diameter = 12.5;
-bore_clearance = max(cube_x, cube_y, cube_z);
-
-
-module screw_bore(){
-screw_hole("M4,20", head="socket", counterbore=bore_clearance, $fn=32, anchor=BOT)
-  attach(TOP)
-    down(bore_clearance + washer_thickness)
-      cyl(d=washer_diameter, h=bore_clearance, anchor=BOT);
-}
 
 // Function to create the model
-module block(){
+module corner122u2(){
 diff()
-  cuboid([cube_x,cube_y,cube_z], chamfer=cube_ch) {
-    fwd(10)
-      attach(TOP)
-        down(cube_z + thread_engagement) screw_bore();
-    up(10) 
-      attach(FRONT)
-        down(cube_y + thread_engagement) screw_bore();
+  cuboid([u,2*u,2*u], chamfer=cube_ch) {
+      // Top face screw (centered in X, front offset in Y)
+      attach(TOP) fwd(u/2) screw_bore();
+      // Front face screw (centered in X, top offset in Z)
+      attach(FRONT) up(u/2) rotate([90,0,0]) screw_bore();
   }
 }
 
-block();
+corner122u2();
