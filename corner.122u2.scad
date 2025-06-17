@@ -7,10 +7,9 @@ include <config.scad>
 module corner122u2(){
 diff()
   cuboid([u,2*u,2*u], chamfer=cube_ch) {
-      // Top face screw (centered in X, front offset in Y)
-      attach(TOP) fwd(u/2) screw_bore();
-      // Front face screw (centered in X, top offset in Z)
-      attach(FRONT) up(u/2) rotate([90,0,0]) screw_bore();
+    attach(TOP) fwd(u/2) down(u) screw_bore();
+    up(u/2) back(u/2) attach(RIGHT) screw_bore();
+    up(u/2) back(u/2) attach(LEFT) screw_bore();
   }
 }
 
