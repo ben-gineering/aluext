@@ -18,7 +18,6 @@ bore_clearance = 3 * u;
 screw_type = conf == "2020" ? "M4,20" :
              conf == "3030" ? "M6,30" : "M4,20";
 
-assert(conf != undef);
 
 module screw_bore(){
 down(u+thread_engagement)
