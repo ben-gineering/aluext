@@ -4,7 +4,7 @@ include <config.scad>
 
 
 // Function to create the model
-module corner122u2(){
+module block122u2(){
 diff()
   cuboid([u,2*u,2*u], chamfer=cube_ch) {
     attach(TOP) fwd(u/2) down(u) screw_bore();
@@ -13,4 +13,4 @@ diff()
   }
 }
 
-corner122u2();
+block122u2();

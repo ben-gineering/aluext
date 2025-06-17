@@ -1,33 +1,30 @@
 // Visualization of all components across profiles
 include <BOSL2/std.scad>
-use <config.scad>
-$fn=32;
+include <config.scad>
 
-// Define component spacing based on max profile size
-spacing = 100;
+conf = "4040";
 
-// Create grid of components organized by profile
-for (i = [0:2]) {
-    profile = ["2020", "3030", "4040"][i];
-    translate([0, i * spacing, 0]) 
-    group() {
-        conf = profile;
-        
-        // Corner Components
-        translate([0, 0, 0]) corner111u3();
-        translate([1*u, 0, 0]) corner112u2();
-        translate([2*u, 0, 0]) corner122u2();
+use <block.111u1.scad>
+use <block.122u2.scad>
+use <block.121215mm1.scad>
 
-        // Block Components
-        translate([3*u, 0, 0]) block111u1();
-        translate([4*u, 0, 0]) block122u2();
-        translate([5*u, 0, 0]) block121215mm1();
+use <corner.111u3.scad>
+use <corner.112u2.scad>
+use <corner.122u2.scad>
 
-        // Plate Components
-        translate([6*u, 0, 0]) plate112u2();
+use <plate.112u2.scad>
+use <plate.113u3.scad>
 
-        // Hinge Components
-        translate([7*u, 0, 0]) hingebearing142u2();
-        translate([8*u, 0, 0]) hingerod142u2();
-    }
+xdistribute(sizes=[u,u,u,u,u,u,u,u], spacing=u) {
+  // Block Components
+  block111u1();
+  block122u2();
+  block121215mm1();
+  // Corner Components
+  corner111u3();
+  corner112u2();
+  corner122u2();
+  // Plate Components
+  plate112u2();
+  plate113u3();
 }
