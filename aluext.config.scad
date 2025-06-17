@@ -1,4 +1,4 @@
-conf = undef;
+// Set the main variables based on configuration
 
 // Constants for 2020 profile
 u_2020 = 20;
@@ -27,7 +27,10 @@ washer_thickness_4040 = 1;
 washer_diameter_4040 = 17;
 bore_clearance_4040 = 3 * u_4040;
 
-// Set the main variables based on configuration
+u = undef;
+
+module setconf(conf_val){
+conf = conf_val;
 u = conf == "2020" ? u_2020 : 
     conf == "3030" ? u_3030 :
     conf == "4040" ? u_4040 : u_2020;
@@ -55,7 +58,7 @@ washer_diameter = conf == "2020" ? washer_diameter_2020 :
 bore_clearance = conf == "2020" ? bore_clearance_2020 :
                  conf == "3030" ? bore_clearance_3030 :
                  conf == "4040" ? bore_clearance_4040 : bore_clearance_2020;
-
+}
 
 module screw_bore(){
 down(u+thread_engagement)

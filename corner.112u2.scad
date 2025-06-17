@@ -1,7 +1,6 @@
 include <BOSL2/std.scad>
 include <BOSL2/screws.scad>
-include <config.scad>
-
+include <aluext.config.scad>
 
 // Function to create the model
 module corner112u2(){
