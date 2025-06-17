@@ -1,27 +1,24 @@
 conf = "2020";
 
-if (conf == "2020") {
-  u = 20;
-  cube_ch = 1;
-  thread_engagement = 5;
-  washer_thickness = 1;
-  washer_diameter = 12.5;
-  bore_clearance = 3 * u;
-  screw_type = "M4,20";
-}
+// Define configuration using ternary expressions
+u = conf == "2020" ? 20 : 
+    conf == "3030" ? 30 : 20;
 
-if (conf == "3030") {
-  u = 30;
-  cube_ch = 1.5;
-  thread_engagement = 6;
-  washer_thickness = 1;
-  washer_diameter = 12.5;
-  bore_clearance = 3 * u;
-  screw_type = "M6,30";
-}
+cube_ch = conf == "2020" ? 1 :
+          conf == "3030" ? 1.5 : 1;
 
+thread_engagement = conf == "2020" ? 5 :
+                    conf == "3030" ? 6 : 5;
 
-assert (conf != undef);
+// Washer properties remain constant
+washer_thickness = 1;
+washer_diameter = 12.5;
+bore_clearance = 3 * u;
+
+screw_type = conf == "2020" ? "M4,20" :
+             conf == "3030" ? "M6,30" : "M4,20";
+
+assert(conf != undef);
 
 module screw_bore(){
 down(u+thread_engagement)
