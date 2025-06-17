@@ -1,4 +1,4 @@
-conf = "2020";
+conf = undef;
 
 // Constants for 2020 profile
 u_2020 = 20;
@@ -31,7 +31,6 @@ thread_engagement = conf == "2020" ? thread_engagement_2020 :
 screw_type = conf == "2020" ? screw_type_2020 :
              conf == "3030" ? screw_type_3030 : screw_type_2020;
 
-// Washer properties per profile
 washer_thickness = conf == "2020" ? washer_thickness_2020 :
                    conf == "3030" ? washer_thickness_3030 : washer_thickness_2020;
 
