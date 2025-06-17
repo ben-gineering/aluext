@@ -7,9 +7,8 @@ include <config.scad>
 module corner122u2(){
 diff()
   cuboid([u,2*u,2*u], chamfer=cube_ch) {
-    attach(TOP) fwd(u/2) down(u) screw_bore();
-    up(u/2) back(u/2) attach(RIGHT) screw_bore();
-    up(u/2) back(u/2) attach(LEFT) screw_bore();
+    fwd(u/2) down(u) attach(TOP) screw_bore();
+    up(u/2) back(u) attach(FRONT) screw_bore();
   }
 }
 
