@@ -1,16 +1,16 @@
 include <BOSL2/std.scad>
 include <BOSL2/screws.scad>
-include <config.scad>
+include <aluext.config.scad>
 
 // Function to create the model
-module plate112u2(){
+module plate112u2(u){
 diff()
-  cuboid([u,u,2*u], chamfer=cube_ch) {
-      up(u/2) attach(FRONT) screw_bore();
-      down(u/2) attach(FRONT) screw_bore();
-      up(u/2) attach(BACK) screw_bore();
-      down(u/2) attach(BACK) screw_bore();
+  cuboid([u,u,2*u], chamfer=cube_ch(u)) {
+      up(u/2) attach(FRONT) screw_bore(u);
+      down(u/2) attach(FRONT) screw_bore(u);
+      up(u/2) attach(BACK) screw_bore(u);
+      down(u/2) attach(BACK) screw_bore(u);
   }
 }
 
-plate112u2();
+plate112u2(u);
