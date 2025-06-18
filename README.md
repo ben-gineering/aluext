@@ -39,6 +39,7 @@ Where:
 
 - **Blocks**:
   - `block.111u1.scad`: Block connector for 1u in all dimensions with one screw
+  - `block.112u1.scad`: Block connector for 1u (x), 1u (z), 2u (y) with one screw
   - `block.122u2.scad`: Block connector for 1u (x), 2u (z), 2u (y) with two screws
   - `block.121215mm1.scad`: Block connector with dimensions 12mm (x), 12mm (z), 15mm (y) and one screw (exception to unit-based naming)
 
