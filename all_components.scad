@@ -15,7 +15,7 @@ use <plate.112u2.scad>
 use <plate.113u3.scad>
 
 ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
-  xdistribute(sizes=[for (k=[0:6]) 20], spacing=50) {
+  xdistribute(sizes=[for (k=[0:7]) 20], spacing=50) {
     // Block Components
     block111u1(20);
     block112u1(20);
@@ -30,7 +30,7 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     plate113u3(20);
   }
 
-  xdistribute(sizes=[for (k=[0:6]) 30], spacing=50) {
+  xdistribute(sizes=[for (k=[0:7]) 30], spacing=50) {
     // Block Components
     block111u1(30);
     block112u1(30);
@@ -45,7 +45,7 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     plate113u3(30);
   }
 
-  xdistribute(sizes=[for (k=[0:6]) 40], spacing=50) {
+  xdistribute(sizes=[for (k=[0:7]) 40], spacing=50) {
     // Block Components
     block111u1(40);
     block112u1(40);
