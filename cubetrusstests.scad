@@ -39,7 +39,7 @@ diag_weave_vnf = [
 
 
 function f(x) = 3 - 2.5 * x;
-function r(x) = 0.5 * 360 * x * x * x;
+function r(x) = 1* 360 * x * x * x;
 pathstep = 1;
 height = 100;
 shape_points = subdivide_path(square(10),40,closed=true);
@@ -47,11 +47,18 @@ path_transforms = [for (i=[0:pathstep:height]) let(t=i/height) up(i) * scale([f(
 sweep(shape_points, path_transforms)
 {
    sweep_attach(LEFT,BOT,0.4)
-      scale(0.5) down(10) sweep(shape_points, path_transforms);
-   sweep_attach(RIGHT,BOT,0.5)
-      scale(0.5) down(10) sweep(shape_points, path_transforms);
+      scale(0.5) xrot(-30) down(5) sweep(shape_points, path_transforms);
+   sweep_attach(LEFT,BOT,0.6)
+      scale(0.3) xrot(-30) down(5) sweep(shape_points, path_transforms);
    sweep_attach(LEFT,BOT,0.8)
-      scale(0.2) down(10) sweep(shape_points, path_transforms);
+      scale(0.1) xrot(-30) down(5) sweep(shape_points, path_transforms);
+   
+   sweep_attach(RIGHT,BOT,0.3)
+      scale(0.6) xrot(-30) down(5) sweep(shape_points, path_transforms);
+   sweep_attach(RIGHT,BOT,0.5)
+      scale(0.4) xrot(-30) down(5) sweep(shape_points, path_transforms);
+   sweep_attach(RIGHT,BOT,0.7)
+      scale(0.2) xrot(-30) down(5) sweep(shape_points, path_transforms);
    sweep_attach(RIGHT,BOT,0.9)
-      scale(0.2) down(10) sweep(shape_points, path_transforms);
+      scale(0.1) xrot(-30) down(5) sweep(shape_points, path_transforms);
 }
