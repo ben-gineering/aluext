@@ -44,4 +44,14 @@ pathstep = 1;
 height = 100;
 shape_points = subdivide_path(square(10),40,closed=true);
 path_transforms = [for (i=[0:pathstep:height]) let(t=i/height) up(i) * scale([f(t),f(t),i]) * zrot(r(t))];
-sweep(shape_points, path_transforms, texture=diag_weave_vnf, tex_size=[40,50], tex_depth=5, tex_samples=20);
+sweep(shape_points, path_transforms)
+{
+   sweep_attach(LEFT,BOT,0.4)
+      scale(0.5) down(10) sweep(shape_points, path_transforms);
+   sweep_attach(RIGHT,BOT,0.5)
+      scale(0.5) down(10) sweep(shape_points, path_transforms);
+   sweep_attach(LEFT,BOT,0.8)
+      scale(0.2) down(10) sweep(shape_points, path_transforms);
+   sweep_attach(RIGHT,BOT,0.9)
+      scale(0.2) down(10) sweep(shape_points, path_transforms);
+}
