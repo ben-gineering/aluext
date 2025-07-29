@@ -3,7 +3,7 @@ include <BOSL2/screws.scad>
 include <aluext.config.scad>
 
 // Function to create the model
-module corner45113u2(u){
+module corner45114u2(u){
   union() {
     diff(){
       cuboid([u,u,2*u], chamfer=cube_ch(u)) {
@@ -18,4 +18,4 @@ module corner45113u2(u){
   }
 }
 
-corner45113u2(20);
+corner45114u2(20);

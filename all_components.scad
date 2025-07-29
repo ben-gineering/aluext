@@ -4,18 +4,24 @@ include <aluext.config.scad>
 // Visualization of all components across profiles
 use <block.111u1.scad>
 use <block.112u1.scad>
-use <block.122u2.scad>
 use <block.121215mm1.scad>
+use <block.122u2.scad>
 
 use <corner.111u3.scad>
 use <corner.112u2.scad>
 use <corner.122u2.scad>
 
+use <corner45.113u2.scad>
+use <corner45.113u3.scad>
+use <corner45.114u2.scad>
+
 use <plate.112u2.scad>
 use <plate.113u3.scad>
+use <plate.114u2.scad>
+use <plate.115u2.scad>
 
 ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
-  xdistribute(sizes=[for (k=[0:7]) 20], spacing=50) {
+  xdistribute(sizes=[for (k=[0:12]) 20], spacing=50) {
     // Block Components
     block111u1(20);
     block112u1(20);
@@ -25,12 +31,17 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     corner111u3(20);
     corner112u2(20);
     corner122u2(20);
+    corner45113u2(20);
+    corner45113u3(20);
+    corner45114u2(20);
     // Plate Components
     plate112u2(20);
     plate113u3(20);
+    plate114u2(20);
+    plate115u2(20);
   }
 
-  xdistribute(sizes=[for (k=[0:7]) 30], spacing=50) {
+  xdistribute(sizes=[for (k=[0:12]) 30], spacing=50) {
     // Block Components
     block111u1(30);
     block112u1(30);
@@ -40,12 +51,17 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     corner111u3(30);
     corner112u2(30);
     corner122u2(30);
+    corner45113u2(30);
+    corner45113u3(30);
+    corner45114u2(30);
     // Plate Components
     plate112u2(30);
     plate113u3(30);
+    plate114u2(40);
+    plate115u2(40);
   }
 
-  xdistribute(sizes=[for (k=[0:7]) 40], spacing=50) {
+  xdistribute(sizes=[for (k=[0:12]) 40], spacing=50) {
     // Block Components
     block111u1(40);
     block112u1(40);
@@ -55,8 +71,13 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     corner111u3(40);
     corner112u2(40);
     corner122u2(40);
+    corner45113u2(40);
+    corner45113u3(40);
+    corner45114u2(40);
     // Plate Components
     plate112u2(40);
     plate113u3(40);
+    plate114u2(40);
+    plate115u2(40);
   }
 }
