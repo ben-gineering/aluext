@@ -20,12 +20,16 @@ use <plate.113u3.scad>
 use <plate.114u2.scad>
 use <plate.115u2.scad>
 
+$vpr = [45, 0, 40]; // rotation
+//$vpt = [0, 0, 0]; // translation
+$vpd = 3000; // distance
+
 ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
   xdistribute(sizes=[for (k=[0:12]) 20], spacing=50) {
     // Block Components
-    block111u1(20);
-    block112u1(20);
-    block122u2(20);
+    rotate([$t * 360, 0, 0]) block111u1(20);
+    rotate([0, $t * 360, 0]) block112u1(20);
+    rotate([0, 0, $t * 360]) block122u2(20);
     // block121215mm1(20);
     // Corner Components
     corner111u3(20);
@@ -57,8 +61,8 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     // Plate Components
     plate112u2(30);
     plate113u3(30);
-    plate114u2(40);
-    plate115u2(40);
+    plate114u2(30);
+    plate115u2(30);
   }
 
   xdistribute(sizes=[for (k=[0:12]) 40], spacing=50) {
