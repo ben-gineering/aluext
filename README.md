@@ -2,6 +2,8 @@
 
 A collection of OpenSCAD models for aluminum extrusion-based projects and components.
 
+![animated components](./assets/banner.gif)
+
 ## Overview
 
 This repository contains parametric 3D models for various components that can be used with aluminum extrusion profiles. These models can be customized and 3D printed to create mounts, connectors, and other accessories for your DIY projects.

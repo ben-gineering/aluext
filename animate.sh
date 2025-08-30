@@ -11,7 +11,7 @@ for SHARD in $(seq 1 $NUM_SHARDS); do
     --animate_sharding $SHARD/$NUM_SHARDS \
     -o assets/frame${SHARD}_%d.png \
     --colorscheme BeforeDawn \
-    --imgsize=2048,2048 src/all_components.scad &
+    --imgsize=1200,500 src/all_components.scad &
 done
 
 # Wait for all background processes to finish

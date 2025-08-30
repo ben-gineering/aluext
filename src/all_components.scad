@@ -19,9 +19,9 @@ use <plate.113u3.scad>
 use <plate.114u2.scad>
 use <plate.115u2.scad>
 
-$vpr = [45, 0, 40]; // rotation
+$vpr = [45, 0, 0]; // rotation
 //$vpt = [0, 0, 0]; // translation
-$vpd = 3000; // distance
+$vpd = 1500; // distance
 
 ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
   xdistribute(sizes=[for (k=[0:12]) 20], spacing=50) {
