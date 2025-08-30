@@ -2,6 +2,8 @@ include <BOSL2/std.scad>
 include <BOSL2/screws.scad>
 include <aluext.config.scad>
 
+// this is a custom block not part of the core set
+
 washer_thickness = 0;
 washer_diameter = 0;
 
@@ -13,4 +15,4 @@ diff()
   }
 }
 
-block121215mm1(u);
+block121215mm1(20);

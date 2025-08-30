@@ -12,4 +12,4 @@ diff()
   }
 }
 
-corner122u2(u);
+corner122u2(20);

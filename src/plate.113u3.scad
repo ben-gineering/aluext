@@ -15,4 +15,4 @@ diff()
   }
 }
 
-plate113u3(u);
+plate113u3(20);

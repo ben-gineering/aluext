@@ -2,6 +2,8 @@ include <BOSL2/std.scad>
 include <BOSL2/screws.scad>
 include <aluext.config.scad>
 
+// this is a custom block not part of the core set
+
 // Function to create the model
 module mount122u2(u){
   difference(){

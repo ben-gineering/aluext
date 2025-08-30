@@ -4,7 +4,6 @@ include <aluext.config.scad>
 // Visualization of all components across profiles
 use <block.111u1.scad>
 use <block.112u1.scad>
-use <block.121215mm1.scad>
 use <block.122u2.scad>
 
 use <corner.111u3.scad>
@@ -30,7 +29,6 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     rotate([0, 0, $t * 360]) block111u1(20);
     rotate([0, 0, $t * 360]) block112u1(20);
     rotate([0, 0, $t * 360]) block122u2(20);
-    // block121215mm1(20);
     // Corner Components
     rotate([0, 0, $t * 360]) corner111u3(20);
     rotate([0, 0, $t * 360]) corner112u2(20);
@@ -50,7 +48,6 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     rotate([0, 0, $t * 360]) block111u1(30);
     rotate([0, 0, $t * 360]) block112u1(30);
     rotate([0, 0, $t * 360]) block122u2(30);
-    // block121215mm1(30);
     // Corner Components
     rotate([0, 0, $t * 360]) corner111u3(30);
     rotate([0, 0, $t * 360]) corner112u2(30); 
@@ -70,7 +67,6 @@ ydistribute(sizes=[for (k=[0:2]) 20], spacing=70) {
     rotate([0, 0, $t * 360]) block111u1(40);
     rotate([0, 0, $t * 360]) block112u1(40);
     rotate([0, 0, $t * 360]) block122u2(40);
-    //block121215mm1(40);
     // Corner Components
     rotate([0, 0, $t * 360]) corner111u3(40);
     rotate([0, 0, $t * 360]) corner112u2(40);

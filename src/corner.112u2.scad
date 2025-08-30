@@ -13,4 +13,4 @@ diff()
   }
 }
 
-corner112u2(u);
+corner112u2(20);

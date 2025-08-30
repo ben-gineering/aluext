@@ -13,4 +13,4 @@ diff()
   }
 }
 
-plate112u2(u);
+plate112u2(20);

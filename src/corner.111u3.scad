@@ -16,4 +16,4 @@ module corner111u3(u) {
 }
 
 // Create the model
-corner111u3(u);
+corner111u3(20);

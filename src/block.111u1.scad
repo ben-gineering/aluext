@@ -11,4 +11,4 @@ diff()
   }
 }
 
-block111u1(u);
+block111u1(20);

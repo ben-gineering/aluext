@@ -1,5 +1,6 @@
 include <BOSL2/std.scad>
 
+// this is a custom block not part of the core set
 
 // Cube dimensions
 cube_x= 20;   // Length in X direction
