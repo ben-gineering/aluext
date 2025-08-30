@@ -12,6 +12,13 @@ The main motivation behind the AluExt framework is that by adhering to a few set
 
 The components are designed to be parametric to accommodate different hardware combinations, while providing sensible defaults for quick prototyping.
 
+## Example Projects
+
+![footdrums built onto a guitar case](./assets/afdrums.jpg)
+![desk monitor and speaker rack](./assets/desk.jpg)
+![prototype lamp stand](./assets/lamp.jpg)
+![10 inch server rack](./assets/server.jpg)
+
 ## Default Parameters
 
 - **Supported Extrusion Profiles**: 2020 (20x20mm), 3030 (30x30mm), 4040 (40x40mm)
@@ -26,7 +33,7 @@ All components are parametric and designed for use with 20x20mm aluminum extrusi
 `[type].[dimensions]u[screw_count].scad`
 
 Where:
-- `[type]`: The component type (e.g., corner, block, plate, hinge.bearing, hinge.rod)
+- `[type]`: The component type (e.g., corner, block, plate)
 - `[dimensions]`: Three numbers representing the dimensions in units (u) in the order: **width (x)**, **height (z)**, **depth (y)**
 - `[screw_count]`: The number of screws used by the component
 
@@ -49,10 +56,6 @@ Where:
 - **Hinges**:
   - `hinge.bearing.142u2.scad`: Bearing housing for hinge (1u x, 4u z, 2u y) with two screws
   - `hinge.rod.142u2.scad`: Rod mount for hinge (1u x, 4u z, 2u y) with two screws
-
-### Deprecated Components
-
-The `deprecated/` directory contains older versions of components that are no longer recommended for use.
 
 ## Parameters
 
