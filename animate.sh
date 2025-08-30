@@ -9,19 +9,19 @@ NUM_SHARDS=12      # Total number of shards (parallel processes)
 for SHARD in $(seq 1 $NUM_SHARDS); do
   openscad --animate $ANIMATE_FRAMES \
     --animate_sharding $SHARD/$NUM_SHARDS \
-    -o frame${SHARD}_%d.png \
+    -o assets/frame${SHARD}_%d.png \
     --colorscheme BeforeDawn \
-    --imgsize=2048,2048 all_components.scad &
+    --imgsize=2048,2048 src/all_components.scad &
 done
 
 # Wait for all background processes to finish
 wait
 
 # Combine all PNG frames into a GIF using magick (ImageMagick)
-magick frame*.png -set delay $DELAY animated.gif
+magick assets/frame*.png -set delay $DELAY animated.gif
 
 # Generate a MP4 file from the GIF
 ffmpeg -i animated.gif -movflags faststart -pix_fmt yuv420p animated.mp4
 
 # clean up
-rm frame*.png
+rm assets/frame*.png
