@@ -15,11 +15,14 @@ The main motivation behind the AluExt framework is that by adhering to a few set
 The components are designed to be parametric to accommodate different hardware combinations, while providing sensible defaults for quick prototyping.
 
 ## Example Projects
-
-![footdrums built onto a guitar case](./assets/afdrums.jpg)
-![desk monitor and speaker rack](./assets/desk.jpg)
-![prototype lamp stand](./assets/lamp.jpg)
-![10 inch server rack](./assets/server.jpg)
+### footdrums built onto a guitar case
+![afdrums](./assets/afdrums.jpg)
+### desk monitor and speaker rack
+![desk](./assets/desk.jpg)
+### prototype lamp stand
+![lamp](./assets/lamp.jpg)
+### 10 inch server rack
+![server](./assets/server.jpg)
 
 ## Default Parameters
 
