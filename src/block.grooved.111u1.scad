@@ -4,7 +4,7 @@ include <aluext.config.scad>
 
 // V-groove parameters (override with -D, e.g. -D groove_angle=60)
 groove_angle = 90;    // V-groove apex angle in degrees
-groove_depth = 1;     // V-groove depth in mm
+groove_depth = 2;     // V-groove depth in mm
 
 // V-grooves for one face (oriented for FRONT, replicated to all 4 sides via zrot_copies)
 module v_grooves_face(u) {
